@@ -47,6 +47,20 @@ public class Application
 		System.out.println(v2);
 		
 		
+		Caja nueva = new Caja(); //si no hemos definido un constructor en la clase
+		/*
+		 *     constructor por defecto 
+		 *     public Caja(){
+		 *        super();
+		 *     }
+		 *     
+		 */
+		System.out.println(nueva);
+		
+		nueva.setPeso(45);
+		
+		
+		
 	}
 	
 	

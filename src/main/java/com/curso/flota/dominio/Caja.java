@@ -6,21 +6,25 @@ public class Caja implements Serializable{
 
 	private double peso;
 	
+	
 	public Caja() {
-		peso = 0;
+		//super();
+		this.peso = 10;
 	}
 	
 	public Caja(double peso) {
+		super();
 		this.peso = peso;
 	}
 	
 	public double getPeso() {
-		return peso;
+		return this.peso;
 	}
 	
 	public void setPeso(double peso) {
 		//validar
-		this.peso = peso;
+		if (peso > 0 )
+			this.peso = peso;
 	}
 
 	@Override
