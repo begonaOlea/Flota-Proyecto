@@ -57,20 +57,21 @@ public class Vehiculo implements Serializable {
 	}
 
 
-	public void setCargaActual(double cargaActual) {
-		this.cargaActual = cargaActual;
-	}
-
-
 	public int getNumCajas() {
 		return numCajas;
 	}
 
-
-	public void setNumCajas(int numCajas) {
-		this.numCajas = numCajas;
+	
+	public void cargar(Caja caja) {
+		
+		if ( (caja.getPeso() + this.cargaActual ) > this.cargaMaxima ){
+			//throw exception
+			System.out.println("No se pudo añadir caja. Exceso de carga");
+		}	else {
+			this.cargaActual += caja.getPeso();
+			this.numCajas ++;
+		}
 	}
-
 
 	@Override
 	public String toString() {

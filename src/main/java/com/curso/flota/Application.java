@@ -1,5 +1,6 @@
 package com.curso.flota;
 
+import com.curso.flota.dominio.Caja;
 import com.curso.flota.dominio.Vehiculo;
 
 public class Application
@@ -36,6 +37,15 @@ public class Application
 				v2.getCargaMaxima());
 		
 		System.out.println(v2);
+		
+		
+		System.out.println(".... cargo una caja de 500 kg en v2");
+		v2.cargar(new Caja(500));
+		System.out.println(v2);
+		System.out.println(".... cargo una caja de 70 kg en v2");
+		v2.cargar(new Caja(70));
+		System.out.println(v2);
+		
 		
 	}
 	
