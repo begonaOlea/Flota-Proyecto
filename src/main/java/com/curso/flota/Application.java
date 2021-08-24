@@ -25,8 +25,17 @@ public class Application
 		
 		generador(v2, nota);
 		
-		System.out.printf("Despues Carga maxima es %f, y nota %d ", v2.getCargaMaxima(), nota);
+		System.out.printf("Despues Carga maxima es %f, y nota %d %n", v2.getCargaMaxima(), nota);
 		
+		
+		// mostrar los datos de un vehiculo
+		
+		
+		System.out.printf("Matricula %s ,  cargaMax Permitida %f %n", 
+				v2.getMatricula(),
+				v2.getCargaMaxima());
+		
+		System.out.println(v2);
 		
 	}
 	

@@ -70,6 +70,15 @@ public class Vehiculo implements Serializable {
 	public void setNumCajas(int numCajas) {
 		this.numCajas = numCajas;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Vehiculo [matricula=" + matricula + ", cargaMaxima=" + cargaMaxima + ", cargaActual=" + cargaActual
+				+ ", numCajas=" + numCajas + "]";
+	}
+
+
 	
 	
 	
