@@ -108,7 +108,7 @@ public class EjemploBreakContinue {
 		for(int i = 0 ; i < 5 ; i++) {
 			for(int l = (byte) 'A'; l <= (byte)'F'; l++) {
 				System.out.print((char)l);
-				if(l == 'E') continue buclefuera;  //salta 108 
+				if(l == 'E') continue buclefuera;  //salta 108  no imprime salto delinea
 				System.out.print("*");
 			}
 			System.out.println("");
