@@ -1,6 +1,6 @@
 package com.curso.varios.herencia;
 
-public final class Gerente extends Empleado{
+public  class Gerente extends Empleado{
     
     protected String departamento;
     

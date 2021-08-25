@@ -15,6 +15,25 @@ public class InformeFlota {
 		Caja c;
 		
 	}
+	
+	
+	public void  informeConsumo(Vehiculo[] flota) {
+		
+		System.out.println("... Informe consumos flota ...");
+		System.out.println(" Consumos por vehiculo ");
+		double total = 0;
+		for (Vehiculo f: flota){
+			double consumo =  f.calcularFuel() ;
+			total += consumo;
+			System.out.println(f.getMatricula() + ": " + consumo );
+			
+		}
+		System.out.println(" ....................... ");
+		System.out.println(" TOTAL CONSUMO " + total);
+		System.out.println(" ....................... ");
+		
+	}
+	
 
 }
 

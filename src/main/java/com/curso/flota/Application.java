@@ -1,7 +1,10 @@
 package com.curso.flota;
 
+import com.curso.flota.dominio.Barcaza;
 import com.curso.flota.dominio.Caja;
+import com.curso.flota.dominio.Camion;
 import com.curso.flota.dominio.Vehiculo;
+import com.curso.flota.informes.InformeFlota;
 
 public class Application
 {
@@ -61,6 +64,15 @@ public class Application
 		
 		double d = Vehiculo.CARGA_MAXIMA_DEFECTO;
 		double dd = v2.CARGA_MAXIMA_DEFECTO;
+		
+		
+		// PRUEBAS CONSUMO
+		
+		Vehiculo[] lista = new Vehiculo[3];
+		lista[0] = new Camion(1000,"C1111",3);
+		lista[1] = new Barcaza(1000,"B1111");
+		lista[2] = new Camion(1000,"C2222",2);
+		new InformeFlota().informeConsumo(lista);
 		
 	}
 	

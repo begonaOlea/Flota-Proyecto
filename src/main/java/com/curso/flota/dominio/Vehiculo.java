@@ -82,6 +82,10 @@ public class Vehiculo implements Serializable {
 				+ ", numCajas=" + numCajas + "]";
 	}
 
+	
+	public double calcularFuel() {
+		return 0;
+	}
 
 	
 	
