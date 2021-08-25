@@ -13,7 +13,10 @@ public class Vehiculo implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
-	// atributos
+	//variables  de clase - 1 para toda la aplicacion
+	public static final double CARGA_MAXIMA_DEFECTO = 1000.0;
+	
+	// atributos - variables de instancia (objeto)
 	private String matricula;
 	private double cargaMaxima;
 	private double cargaActual;
@@ -63,7 +66,7 @@ public class Vehiculo implements Serializable {
 
 	
 	public void cargar(Caja caja) {
-		
+		int a = 9;
 		if ( (caja.getPeso() + this.cargaActual ) > this.cargaMaxima ){
 			//throw exception
 			System.out.println("No se pudo añadir caja. Exceso de carga");

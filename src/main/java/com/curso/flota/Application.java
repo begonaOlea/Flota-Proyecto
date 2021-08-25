@@ -59,7 +59,8 @@ public class Application
 		
 		nueva.setPeso(45);
 		
-		
+		double d = Vehiculo.CARGA_MAXIMA_DEFECTO;
+		double dd = v2.CARGA_MAXIMA_DEFECTO;
 		
 	}
 	
