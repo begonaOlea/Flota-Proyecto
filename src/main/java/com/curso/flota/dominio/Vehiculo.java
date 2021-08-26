@@ -9,7 +9,7 @@ import java.io.Serializable;
  * @author begonaolea
  * @version 1.0.0
  */
-public class Vehiculo implements Serializable {
+public abstract class Vehiculo implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
@@ -65,11 +65,12 @@ public class Vehiculo implements Serializable {
 	}
 
 	
-	public void cargar(Caja caja) {
-		int a = 9;
+	public void cargar(Caja caja) throws VehiculoException{
+		
 		if ( (caja.getPeso() + this.cargaActual ) > this.cargaMaxima ){
-			//throw exception
-			System.out.println("No se pudo añadir caja. Exceso de carga");
+			throw new VehiculoException("No se puede cargar la caja . Excede del peso permitido",
+					(this.cargaMaxima - ( this.cargaActual + caja.getPeso())));
+			//System.out.println("No se pudo añadir caja. Exceso de carga");
 		}	else {
 			this.cargaActual += caja.getPeso();
 			this.numCajas ++;
@@ -83,11 +84,8 @@ public class Vehiculo implements Serializable {
 	}
 
 	
-	public double calcularFuel() {
-		return 0;
-	}
+	public abstract double calcularFuel()  throws VehiculoException;
+	
 
-	
-	
 	
 }

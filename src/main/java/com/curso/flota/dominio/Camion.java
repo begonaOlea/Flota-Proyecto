@@ -10,7 +10,9 @@ public class Camion extends Vehiculo{
 	}
 	
 	@Override
-	public double calcularFuel() {
+	public double calcularFuel() throws VehiculoException{
+		
+		 if(numEjes < 2) throw new VehiculoException("No se puede calcular", 0);
 		
 		return  this.getCargaActual() * 30 + 2 * numEjes;
 	}

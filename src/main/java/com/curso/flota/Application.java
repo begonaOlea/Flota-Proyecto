@@ -3,6 +3,7 @@ package com.curso.flota;
 import com.curso.flota.dominio.Barcaza;
 import com.curso.flota.dominio.Caja;
 import com.curso.flota.dominio.Camion;
+import com.curso.flota.dominio.Furgoneta;
 import com.curso.flota.dominio.Vehiculo;
 import com.curso.flota.informes.InformeFlota;
 
@@ -14,8 +15,8 @@ public class Application
 		//uso de una clase 
 		//crear una instancia de la clase (objeto)
 		
-		Vehiculo v = new Vehiculo(200.0, "B7777");
-		Vehiculo v2 = new Vehiculo(3000.0,"S8888");
+		Vehiculo v = new Barcaza(200.0, "B7777");
+		Vehiculo v2 = new Barcaza(3000.0,"S8888");
 		Vehiculo v3 = v;
 		
 		// v, v2, v3 son variables de referencia que apuntan a un objeto de 
@@ -68,11 +69,21 @@ public class Application
 		
 		// PRUEBAS CONSUMO
 		
-		Vehiculo[] lista = new Vehiculo[3];
+		Vehiculo[] lista = new Vehiculo[4];
 		lista[0] = new Camion(1000,"C1111",3);
 		lista[1] = new Barcaza(1000,"B1111");
 		lista[2] = new Camion(1000,"C2222",2);
+		lista[3] = new Furgoneta(300, "F888");
 		new InformeFlota().informeConsumo(lista);
+		
+		Vehiculo miCamion = new Camion(44,"M444",7);
+		
+		
+		if ( lista[0] instanceof Camion) {
+			Camion ccc = (Camion) lista[0]; 
+			
+		}
+		
 		
 	}
 	
@@ -84,7 +95,7 @@ public class Application
 		 
 		 v4.setCargaMaxima(555.0);
 		 
-		 Vehiculo v5 = new Vehiculo(4000, "U789");
+		// Vehiculo v5 = new Vehiculo(4000, "U789");
 		 
 		
 	}
